@@ -38,7 +38,6 @@ body {
 .card-link {
   display: inline-block;
   text-decoration: none;
-  transition: opacity 0.2s ease-in;
   transition: all 0.3s ease-in;
 }
 a.card-link:hover {
