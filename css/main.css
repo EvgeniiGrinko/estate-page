@@ -395,3 +395,32 @@ a.card-link:hover {
 .toggle__real:checked ~ .toggle__title {
   font-weight: 500;
 }
+/*form buttons*/
+.form-btn {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+  transition: background-color 0.2s ease-in;
+}
+.form-btn:hover {
+  background-color: rgb(204, 198, 198);
+}
+.form-btn + .form-btn {
+  margin-top: 10px;
+}
+.form-btn img {
+  display: initial;
+  line-height: 1;
+  vertical-align: bottom;
+  margin-right: 6px;
+}
