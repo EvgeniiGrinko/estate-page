@@ -347,3 +347,51 @@ a.card-link:hover {
   text-decoration: underline;
   color: #0e4369;
 }
+/* toggle */
+.toggle {
+  cursor: pointer;
+}
+.toggle__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.toggle__fake {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 20px;
+  background: #c4c4c4;
+  border-radius: 10px;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+.toggle__fake::before {
+  top: 2px;
+  left: 2px;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #3c3c3c;
+  border-radius: 50%;
+  transition: left 0.2s ease-in;
+}
+.toggle__real:checked + .toggle__fake {
+  background: #ffe074;
+}
+.toggle__real:checked + .toggle__fake::before {
+  /* right: 2px; */
+  left: 19px;
+}
+.toggle__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000000;
+}
+.toggle__real:checked ~ .toggle__title {
+  font-weight: 500;
+}
