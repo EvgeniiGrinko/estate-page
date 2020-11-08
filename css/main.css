@@ -139,7 +139,8 @@ a.card-link:hover {
   vertical-align: bottom;
 }
 /*sidebar*/
-.widget {
+.widget + .widget {
+  margin-top: 30px;
 }
 .widget__title {
   position: relative;
@@ -220,3 +221,129 @@ a.card-link:hover {
 .location__btn--active:hover {
   background-color: #ddaf09;
 } */
+/*radio*/
+.radio {
+  display: block;
+  cursor: pointer;
+}
+.radio + .radio {
+  margin-top: 15px;
+}
+.radio__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.radio__real:checked + .radio__fake {
+  background-color: #ffe074;
+}
+.radio__real:checked ~ .radio__title {
+  font-weight: 500;
+}
+
+.radio__real:checked + .radio__fake::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #3c3c3c;
+  transform: translate(-50%, -50%);
+}
+
+.radio__fake {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #777777;
+  border-radius: 50%;
+  vertical-align: bottom;
+}
+
+.radio__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000000;
+}
+/*checkbox*/
+.checkbox {
+  display: block;
+  cursor: pointer;
+}
+.checkbox + .checkbox {
+  margin-top: 15px;
+}
+.checkbox__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.checkbox__fake {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #777777;
+  border-radius: 2px;
+  vertical-align: bottom;
+}
+.checkbox__real:checked + .checkbox__fake {
+  background: #ffe074;
+}
+.checkbox__real:checked + .checkbox__fake::before {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background-image: url("./../img/icons/check.svg");
+  transform: translate(-50%, -50%);
+  background-size: initial;
+  background-position: center;
+}
+.checkbox__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000000;
+}
+.checkbox__real:checked ~ .checkbox__title {
+  font-weight: 500;
+}
+/*hidden-elements*/
+.widget__hidden {
+  display: none;
+}
+.widget__show-hidden {
+  background: transparent;
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin-top: 15px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  color: #4290c9;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.widget__show-hidden:hover {
+  text-decoration: underline;
+  color: #0e4369;
+}
