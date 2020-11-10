@@ -67,6 +67,7 @@ a.card-link:hover {
   font-size: 14px;
   line-height: 23px;
   color: #000000;
+  position: relative;
 }
 .card__badge--class {
   background: #ffcf26;
@@ -74,6 +75,8 @@ a.card-link:hover {
 .card__badge--credit {
   background: #11be75;
   color: #ffffff;
+  position: absolute;
+  left: 80px;
 }
 
 .card__content {
