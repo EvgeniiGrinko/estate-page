@@ -196,6 +196,7 @@ a.card-link:hover {
   line-height: 1.16;
   color: #000000;
   margin-bottom: 21px;
+  cursor: pointer;
 }
 .widget__title::after {
   content: "";
@@ -208,6 +209,13 @@ a.card-link:hover {
   background-repeat: no-repeat;
   background-size: initial;
   background-position: center;
+}
+.widget__title--active::after {
+  transform: rotate(180deg);
+}
+
+.widget__body--hidden {
+  display: none;
 }
 
 .location__row {
@@ -320,6 +328,9 @@ a.card-link:hover {
   display: block;
   cursor: pointer;
 }
+.checkbox--hidden {
+  display: none;
+}
 .checkbox + .checkbox {
   margin-top: 15px;
 }
@@ -369,7 +380,7 @@ a.card-link:hover {
 .widget__hidden {
   display: none;
 }
-.widget__show-hidden {
+.widget__btn-show-hidden {
   background: transparent;
   display: inline-block;
   border: none;
@@ -384,8 +395,11 @@ a.card-link:hover {
   cursor: pointer;
   transition: opacity 0.2s ease-in;
 }
-
-.widget__show-hidden:hover {
+.widget__btn-show-hidden:active,
+.widget__btn-show-hidden:focus {
+  outline: none;
+}
+.widget__btn-show-hidden:hover {
   text-decoration: underline;
   color: #0e4369;
 }
